@@ -45,12 +45,6 @@ dependencies {
     api applicationDependencies.timber
 
 
-
-
-
-
-
-
     //Development dependencies
     debugImplementation developmentDependencies.leakCanary
     releaseImplementation developmentDependencies.leakCanaryNoop
