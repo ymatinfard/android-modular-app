@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+dependencies {
+
+    def applicationDependencies = rootProject.ext.mainApplication
+    def unitTestDependencies = rootProject.ext.unitTesting
+    def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+    def developmentDependencies = rootProject.ext.development
+
+    //Compile time dependencies
+    kapt applicationDependencies.roomCompiler
+
+    kapt  applicationDependencies.glideAnnotationProcessor
+
+
+    //Application dependencies
+    api applicationDependencies.kotlin
+    api applicationDependencies.kotlinCoroutinesAndroid
+    api applicationDependencies.appCompat
+    implementation applicationDependencies.recyclerView
+    api applicationDependencies.constraintLayout
+    api applicationDependencies.androidxCore
+    implementation applicationDependencies.glide
+    api applicationDependencies.retrofit
+    api applicationDependencies.retrofitGson
+    api applicationDependencies.koinCore
+    api applicationDependencies.koinExt
+    api applicationDependencies.koinScope
+    api applicationDependencies.koinViewmodel
+    implementation applicationDependencies.room
+    implementation applicationDependencies.roomKtx
+    implementation applicationDependencies.okhttpLoggingInterceptor
+    api applicationDependencies.navigationFragment
+    api applicationDependencies.navigationFragmentKtx
+    api applicationDependencies.navigationUIKtx
+    api applicationDependencies.navigationUI
+    api applicationDependencies.lifeCycleExt
+    api applicationDependencies.lifeCycleViewmodel
+    api applicationDependencies.lifeCycleLiveData
+    api applicationDependencies.lifecycleRuntime
+    api applicationDependencies.timber
+
+
+
+
+
+
+
+
+    //Development dependencies
+    debugImplementation developmentDependencies.leakCanary
+    releaseImplementation developmentDependencies.leakCanaryNoop
+    testImplementation developmentDependencies.leakCanaryNoop
+}

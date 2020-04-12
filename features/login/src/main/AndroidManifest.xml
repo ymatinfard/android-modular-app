@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.matinfard.login">
+
+    <application>
+        <activity android:name=".presentation.host.AuthActivity">
+            <intent-filter>
+                <action android:name="action.open.login"/>
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

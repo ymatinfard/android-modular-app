@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+dependencies {
+
+    def unitTestDependencies = rootProject.ext.unitTesting
+    def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+
+    //Unit/Integration tests dependencies
+    testImplementation unitTestDependencies.androidxCoreKtx
+    testImplementation unitTestDependencies.androidxTestExt
+    testImplementation unitTestDependencies.archTest
+    testImplementation unitTestDependencies.robolectric
+    testImplementation unitTestDependencies.mockito
+    testImplementation unitTestDependencies.mockitoAndroid
+    testImplementation unitTestDependencies.hamcrest
+    testImplementation unitTestDependencies.junit
+    testImplementation unitTestDependencies.koinTest
+
+
+    //Acceptance tests dependencies
+    androidTestImplementation acceptanceTestDependencies.roomTest
+    androidTestImplementation acceptanceTestDependencies.arcCoreTesting
+    androidTestImplementation acceptanceTestDependencies.expressoCore
+    androidTestImplementation acceptanceTestDependencies.robolectricAnnotation
+    androidTestImplementation acceptanceTestDependencies.idlingResource
+    androidTestImplementation acceptanceTestDependencies.androidxTestExt
+    androidTestImplementation acceptanceTestDependencies.koinTest
+    androidTestImplementation acceptanceTestDependencies.mockito
+    androidTestImplementation acceptanceTestDependencies.mockitoAndroid
+    androidTestImplementation acceptanceTestDependencies.robolectric
+
+    debugImplementation acceptanceTestDependencies.coreKtx
+    debugImplementation acceptanceTestDependencies.testRule
+    debugImplementation acceptanceTestDependencies.fragmentTest
+}

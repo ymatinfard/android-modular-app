@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+dependencies {
+
+    def unitTestDependencies = rootProject.ext.unitTesting
+    def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+
+    implementation project(path: ':libraries:librarybase')
+
+    //Unit/Integration tests dependencies
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    testImplementation unitTestDependencies.androidxCoreKtx
+    testImplementation unitTestDependencies.androidxTestExt
+    testImplementation unitTestDependencies.archTest
+    testImplementation unitTestDependencies.robolectric
+    testImplementation unitTestDependencies.mockito
+    testImplementation unitTestDependencies.mockitoAndroid
+    testImplementation unitTestDependencies.hamcrest
+    testImplementation unitTestDependencies.junit
+    testImplementation unitTestDependencies.koinTest
+
+
+    //Acceptance tests dependencies
+    androidTestImplementation acceptanceTestDependencies.roomTest
+    androidTestImplementation acceptanceTestDependencies.arcCoreTesting
+    androidTestImplementation acceptanceTestDependencies.expressoCore
+    androidTestImplementation acceptanceTestDependencies.robolectricAnnotation
+    androidTestImplementation acceptanceTestDependencies.idlingResource
+    androidTestImplementation acceptanceTestDependencies.androidxTestExt
+    androidTestImplementation acceptanceTestDependencies.koinTest
+    androidTestImplementation acceptanceTestDependencies.mockito
+    androidTestImplementation acceptanceTestDependencies.mockitoAndroid
+    androidTestImplementation acceptanceTestDependencies.robolectric
+
+}
