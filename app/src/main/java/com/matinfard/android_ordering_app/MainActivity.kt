@@ -3,9 +3,7 @@ package com.matinfard.android_ordering_app
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.matinfard.librarybase.platform.NavigationActions
-import com.matinfard.login.presentation.host.AuthActivity
-import com.matinfard.product.ProductActivity
+import com.matinfard.login.presentation.host.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
        // startActivity(NavigationActions.openLoginIntent(this))
-        startActivity(Intent(this, AuthActivity::class.java))
+        startActivity(Intent(this, LoginActivity::class.java))
 
     }
 }

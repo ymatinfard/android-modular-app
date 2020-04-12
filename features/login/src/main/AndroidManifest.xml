@@ -3,7 +3,7 @@
     package="com.matinfard.login">
 
     <application>
-        <activity android:name=".presentation.host.AuthActivity">
+        <activity android:name=".presentation.host.LoginActivity">
             <intent-filter>
                 <action android:name="action.open.login"/>
                 <category android:name="android.intent.category.DEFAULT" />

@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.matinfard.authentication.test", appContext.packageName)
+        assertEquals("com.matinfard.login.test", appContext.packageName)
     }
 }

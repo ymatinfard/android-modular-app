@@ -6,7 +6,7 @@ import com.matinfard.login.AuthKoinModule
 import com.matinfard.login.R
 
 
-class AuthActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
