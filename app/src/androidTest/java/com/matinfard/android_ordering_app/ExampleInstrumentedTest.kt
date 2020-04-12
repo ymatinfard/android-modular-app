@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.matinfard.android_ordering_app", appContext.packageName)
+        assertEquals("com.matinfard.androidorderingapp", appContext.packageName)
     }
 }
