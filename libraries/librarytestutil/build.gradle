@@ -10,7 +10,7 @@ dependencies {
     def unitTestDependencies = rootProject.ext.unitTesting
     def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
 
-    api applicationDependencies.kotlin
+    implementation applicationDependencies.kotlin
 
     //Unit/Integration tests dependencies
     testImplementation unitTestDependencies.androidxCoreKtx

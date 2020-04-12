@@ -46,7 +46,6 @@ dependencies {
     def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
 //    def developmentDependencies = rootProject.ext.development
 
-    implementation project(path: ':libraries:librarybase')
 
     //Compile time dependencies
 //    kapt applicationDependencies.roomCompiler
@@ -113,6 +112,7 @@ dependencies {
     implementation project(path: ':features:order')
     implementation project(path: ':features:setttings')
     implementation project(path: ':libraries:librarytestutil')
+    implementation project(path: ':libraries:librarybase')
     implementation project(path: ':features:product')
 
 
