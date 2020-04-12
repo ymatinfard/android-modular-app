@@ -6,8 +6,11 @@ apply plugin: 'kotlin-kapt'
 
 dependencies {
 
+    def applicationDependencies = rootProject.ext.mainApplication
     def unitTestDependencies = rootProject.ext.unitTesting
     def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+
+    api applicationDependencies.kotlin
 
     //Unit/Integration tests dependencies
     testImplementation unitTestDependencies.androidxCoreKtx
