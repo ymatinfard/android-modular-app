@@ -1,9 +1,9 @@
-package com.matinfard.android_ordering_app
+package com.matinfard.android_ordering_app.presentation
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.matinfard.login.presentation.host.LoginActivity
+import com.matinfard.android_ordering_app.R
+import com.matinfard.librarybase.platform.NavigationActions
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,8 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       // startActivity(NavigationActions.openLoginIntent(this))
-        startActivity(Intent(this, LoginActivity::class.java))
+        startActivity(NavigationActions.openLoginIntent(this))
 
     }
 }

@@ -1,9 +1,9 @@
 package com.matinfard.login.data.repository
 
 import com.matinfard.login.data.model.UserTokenDataModel
-import com.matinfard.login.data.retrofit.service.AuthRemoteDataSource
+import com.matinfard.login.data.retrofit.service.LoginRemoteDataSource
 import com.matinfard.login.domain.model.UserTokenDomainModel
-import com.matinfard.login.domain.repository.AuthRepository
+import com.matinfard.login.domain.repository.LoginRepository
 import com.matinfard.librarybase.data.BaseDataSource
 import com.matinfard.login.domain.model.UserAuthDomainModel
 import com.matinfard.librarybase.exception.Failure
@@ -16,16 +16,16 @@ import org.koin.core.KoinComponent
  */
 
 class AuthRepositoryImpl(
-    private val authRemoteDataSource: AuthRemoteDataSource,
+    private val authRemoteDataSource: LoginRemoteDataSource,
     private val networkHandler: NetworkHandler
-) : AuthRepository, BaseDataSource(), KoinComponent {
+) : LoginRepository, BaseDataSource(), KoinComponent {
 
     override suspend fun getUserToken(userAuthData: UserAuthDomainModel): Result<Failure, UserTokenDomainModel> =
         when (networkHandler.isConnected()) {
             true -> request({ authRemoteDataSource.fetchUserToken(userAuthData) }, {
                 it.toUserToken()
             }, UserTokenDataModel(null))
-            false, null -> Result.Failure(Failure.NetworkConnection)
+            false -> Result.Failure(Failure.NetworkConnection)
         }
 }
 

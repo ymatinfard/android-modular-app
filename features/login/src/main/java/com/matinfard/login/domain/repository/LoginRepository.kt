@@ -6,7 +6,7 @@ import com.matinfard.librarybase.exception.Failure
 import com.matinfard.librarybase.functional.Result
 
 
-interface AuthRepository {
+interface LoginRepository {
 
     suspend fun getUserToken(userAuthData: UserAuthDomainModel): Result<Failure, UserTokenDomainModel>
 

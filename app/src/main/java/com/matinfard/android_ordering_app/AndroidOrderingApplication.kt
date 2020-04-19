@@ -2,7 +2,7 @@ package com.matinfard.android_ordering_app
 
 import android.app.Application
 import com.matinfard.android_ordering_app.di.applicationModule
-import com.matinfard.login.AuthKoinModule
+import com.matinfard.login.LoginKoinModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -16,7 +16,7 @@ class AndroidOrderingApplication : Application() {
             modules(applicationModule)
         }
 
-        AuthKoinModule.loadkoinModule()
+        LoginKoinModule.loadkoinModule()
 
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
     }

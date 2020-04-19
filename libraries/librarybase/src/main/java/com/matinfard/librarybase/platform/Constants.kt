@@ -24,9 +24,6 @@ object Constants {
     const val REGISTRATION_URI = "action.open.registration"
     const val PRODUCT_URI = "action.open.product"
     const val ORDER_URI = "action.open.order"
-    const val LOGIN_PKG_NAME = "com.matinfard.login"
-    const val PRODUCT_PKG_NAME = "com.matinfard.product"
-    const val ORDER_PKG_NAME = "com.matinfard.order"
     val USER_TOKEN_DEFAULT_VAL = null
 
 }
