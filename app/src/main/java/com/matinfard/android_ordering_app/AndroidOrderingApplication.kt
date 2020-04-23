@@ -1,8 +1,6 @@
 package com.matinfard.android_ordering_app
 
 import android.app.Application
-import com.matinfard.android_ordering_app.di.applicationModule
-import com.matinfard.login.LoginKoinModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
