@@ -4,7 +4,7 @@ import com.matinfard.login.data.model.UserTokenDataModel
 import com.matinfard.login.domain.model.UserAuthDomainModel
 import retrofit2.Response
 
-interface LoginRemoteDataSource {
+interface AuthRemoteDataSource {
      suspend fun fetchUserToken(userAuthData: UserAuthDomainModel): Response<UserTokenDataModel>
 
 }

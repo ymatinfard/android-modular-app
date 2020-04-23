@@ -10,7 +10,7 @@ import retrofit2.http.POST
 /**
  * Remote api call
  */
-interface LoginApi {
+interface AuthApi {
     @POST(Constants.LOGIN_URL)
      suspend fun getUserToken(@Body body: UserAuthDomainModel): Response<UserTokenDataModel>
 }

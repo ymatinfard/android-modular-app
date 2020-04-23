@@ -1,6 +1,11 @@
 package com.matinfard.android_ordering_app
 
 import android.app.Application
+<<<<<<< HEAD
+=======
+import com.matinfard.android_ordering_app.di.applicationModule
+import com.matinfard.login.AuthKoinModule
+>>>>>>> parent of 8f3afa5... remove unused constants
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -14,7 +19,7 @@ class AndroidOrderingApplication : Application() {
             modules(applicationModule)
         }
 
-        LoginKoinModule.loadkoinModule()
+        AuthKoinModule.loadkoinModule()
 
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
     }

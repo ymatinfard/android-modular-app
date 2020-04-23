@@ -10,11 +10,11 @@ import retrofit2.Retrofit
 /**
  *
  */
-class LoginRemoteDataSourceImpl : LoginRemoteDataSource, KoinComponent {
+class AuthRemoteDataSourceImpl : AuthRemoteDataSource, KoinComponent {
 
     private val retrofit: Retrofit by inject()
 
-    private val kitchenService = retrofit.create(LoginApi::class.java)
+    private val kitchenService = retrofit.create(AuthApi::class.java)
 
      override suspend fun fetchUserToken(userAuthData: UserAuthDomainModel): Response<UserTokenDataModel> =
         kitchenService.getUserToken(userAuthData)
